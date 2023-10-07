@@ -28,7 +28,7 @@ const[submitButtonDisabled,setSubmitButtonDisabled]=useState(false);
     await  updateProfile(user,{
       displayName:values.name,
     });
-navigate("/");
+navigate("/Homepage");
     
 
     })
@@ -47,7 +47,7 @@ navigate("/");
         onChange={event=>Setvalues((prev)=>({...prev,name:event.target.value}))}/>
         <InputControl label="Email" placeholder="Enter email address"
         onChange={event=>Setvalues((prev)=>({...prev,email:event.target.value}))}/>
-        <InputControl label="Password" placeholder="Enter password "
+        <InputControl label="Password"  type="password" placeholder="Enter password "
         onChange={event=>Setvalues((prev)=>({...prev,pass:event.target.value}))}/>
 
         <div className={styles.footer}>
@@ -58,7 +58,7 @@ navigate("/");
           <p>
             Already have an account?{" "}
             <span>
-              <Link to="/Login">Login</Link>
+              <Link to="/">Signin</Link>
             </span>
           </p>
         </div>

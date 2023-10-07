@@ -44,7 +44,7 @@ navigate("/Homepage");
         <InputControl label="Email" placeholder="Enter email address"
         onChange={event=>setValues(prev=>({...prev,email:event.target.value}))}
         />
-        <InputControl label="Password" placeholder="Enter password "
+        <InputControl label="Password"  type= "password" placeholder="Enter password "
                 onChange={event=>setValues(prev=>({...prev,pass:event.target.value}))}
 
         />
