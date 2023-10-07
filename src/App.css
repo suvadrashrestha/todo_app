@@ -41,7 +41,7 @@ form button:hover{
 .todo{
   margin-top: 20px;
   background: white;
-  padding: 10px 20px;
+  padding: 10px ;
   border-radius: 15px;
   display: flex;
   justify-content: space-between;
@@ -72,11 +72,11 @@ form button:hover{
 }
 .button-complete{
   color:#95faa3;
-  margin-right: 10px;
+  
 }
 .button-edit{
   color:#56cfff;
-  margin-right: 10px;
+  
 }
 .button-delete{
   color:rgb(255,122,98);
@@ -114,3 +114,4 @@ input:focus,button:focus{
     transform: rotate(360deg);
   }
 }
+

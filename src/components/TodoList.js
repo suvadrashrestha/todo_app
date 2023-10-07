@@ -3,7 +3,7 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import EditIcon from '@mui/icons-material/Edit' 
 import DeleteIcon from '@mui/icons-material/Delete'
 
-export default function TodoList({todo,toggleComplete,handleComplete,handleDelete,handleEdit}) {
+export default function TodoList({todo,toggleComplete,handleDelete,handleEdit}) {
     const[newTitle,setNewTitle]=React.useState(todo.title);
     const handleChange=(e)=>{
         e.preventDefault() ;
@@ -29,15 +29,15 @@ export default function TodoList({todo,toggleComplete,handleComplete,handleDelet
         <button className="button-complete"
               onClick={()=>toggleComplete(todo)}
               >
-            <CheckCircleIcon id="i" />
+            <CheckCircleIcon  />
              </button>
         <button className="button-edit"
         onClick={()=>handleEdit(todo,newTitle)}> 
-        <EditIcon id="i"/>
+        <EditIcon/>
 </button>
         <button className="button-delete"
         onClick={()=>handleDelete(todo.id)}>
-        <DeleteIcon id="i" />
+        <DeleteIcon id/>
  </button>
 
        

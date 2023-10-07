@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import {getFirestore} from "firebase/firestore"
+import {getAuth} from "firebase/auth";
 const firebaseConfig = {
   apiKey: "AIzaSyCdpv83bGAF6aETIn62u3Ni1s0dANhzzKw",
   authDomain: "todo-app-2bb14.firebaseapp.com",
@@ -10,4 +11,6 @@ const firebaseConfig = {
   measurementId: "G-3F99R6H5Y9"
 };
 const app = initializeApp(firebaseConfig);
- export const db= getFirestore(app);
+const auth=getAuth();
+const db= getFirestore(app);
+export {db,auth};
