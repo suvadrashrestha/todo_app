@@ -42,8 +42,10 @@ console.log(todos)
 
    <div className="App">
     <div className=" p-4 text-black    ">
-      <h1 className="mb-3 text-4xl">Todo~App</h1>
-      <p className=" pl-20 text-2xl "> Welcome {auth?.currentUser?.displayName}</p>
+      <h1 className="mb-3 text-4xl s rounded-xl text-white  inline">Todo~App</h1>
+      <div>
+      <p className="  pl-20  text-white text-2xl "> Welcome {auth?.currentUser?.displayName}</p>
+      </div>
     </div>
     <div>
       <InputTodo></InputTodo>

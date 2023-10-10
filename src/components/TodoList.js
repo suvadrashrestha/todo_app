@@ -17,7 +17,7 @@ export default function TodoList({todo,toggleComplete,handleDelete,handleEdit}) 
     }
   return (
     <div className="flex mt-3 justify-center items-center w-[90%]">
-       <div className=" md:ml-5 flex  rounded-xl   h-14   ">
+       <div className=" ml-11 flex  rounded-xl   h-14   ">
         
       <input 
       style={{textDecoration:todo.complete && "line-through"}}
