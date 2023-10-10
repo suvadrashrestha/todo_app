@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import "./App.css";
 import Homepage from "./components/Home/Homepage";
-import Login from "./components/Login/Login";
-import Signup from "./components/Signup/Signup";
+import Login from "./components/Login";
+import Signup from "./components/Signup";
 
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
-import { auth } from './firebaseConfig';
 export default function App() {
  
   return (

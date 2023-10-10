@@ -41,13 +41,14 @@ console.log(todos)
   return (<>
 
    <div className="App">
-    <div className="title">
-      <h1 className="text-black-500 text-2xl  ">Todo~App</h1>
+    <div className=" p-4 text-black    ">
+      <h1 className="mb-3 text-4xl">Todo~App</h1>
+      <p className=" pl-20 text-2xl "> Welcome {auth?.currentUser?.displayName}</p>
     </div>
     <div>
       <InputTodo></InputTodo>
     </div>
-    <div className="todo_container">
+    <div >
     {todos.map((todo)=>{
      return <TodoList    todo={todo} key  ={todo.id} toggleComplete={toggleComplete}
       handleDelete={handleDelete} handleEdit={handleEdit}

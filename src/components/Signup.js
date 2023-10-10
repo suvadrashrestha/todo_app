@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
-import styles from "./Signup.module.css"
 import {Link,useNavigate} from "react-router-dom";
-import InputControl from '../InputControl/InputControl'
+import InputControl from './InputControl'
 import { createUserWithEmailAndPassword ,updateProfile} from 'firebase/auth';
-import { auth } from '../../firebaseConfig';
+import { auth } from '../firebaseConfig';
 export default function Signup() {
   const navigate= useNavigate();
   const[values,Setvalues]=useState({
@@ -27,6 +26,8 @@ const[submitButtonDisabled,setSubmitButtonDisabled]=useState(false);
     const user=res.user;
     await  updateProfile(user,{
       displayName:values.name,
+      
+
     });
 navigate("/Homepage");
     
@@ -38,9 +39,9 @@ navigate("/Homepage");
       });
   };
   return (
-    <div className={styles.container}>
-      <div className={styles.innerBox}>
-        <h1 className={styles.heading}>
+    <div className=" flex justify-center items-center bg-gradient-to-r from-purple-600 via-purple-700 to-purple-800 w-[100%] h-full min-h-screen">
+      <div className="flex flex-col gap-8 rounded-lg p-8 shadow-md bg-white w-fit-content h-auto min-w-480">
+        <h1 className="text-x-large font-bold">
             Signup
         </h1>
         <InputControl label="Name" placeholder="Enter your name"
@@ -50,15 +51,15 @@ navigate("/Homepage");
         <InputControl label="Password"  type="password" placeholder="Enter password "
         onChange={event=>Setvalues((prev)=>({...prev,pass:event.target.value}))}/>
 
-        <div className={styles.footer}>
-          <p className={styles.error}>{errorMsg}</p>
-          <button
+        <div className="flex flex-col gap-10">
+          <p className="font-bold text-sm text-red-700 items-center">{errorMsg}</p>
+          <button className="bg-sky-500 text-white font-bold text-base w-[100%] rounded-md py-3 px-10 -mt-10 outline-none"
           disabled={submitButtonDisabled}
           onClick={handleSubmission}>Signup</button>
-          <p>
+          <p className="font-bold text-black">
             Already have an account?{" "}
             <span>
-              <Link to="/">Signin</Link>
+              <Link  className="font-bold text-teal-400 tracking-1 text-base no-underline " to="/">Signin</Link>
             </span>
           </p>
         </div>
